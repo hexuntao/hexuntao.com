@@ -1,0 +1,33 @@
+{
+  "name": "hexuntao.com",
+  "version": "1.0.0",
+  "description": "个人博客 网站",
+  "private": true,
+  "author": {
+    "name": "hexuntao",
+    "url": "https://hexuntao.com"
+  },
+  "homepage": "https://github.com/hexuntao/hexuntao.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexuntao/hexuntao.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.8.4"
+  }
+}
