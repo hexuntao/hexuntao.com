@@ -6,5 +6,5 @@ cd $SHELL_PATH
 cd ..
 
 echo "[deploy] yarn installing..."
-yarn install --frozen-lockfile
+yarn install
 echo "[deploy] yarn install done"
