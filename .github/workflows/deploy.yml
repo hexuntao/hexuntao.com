@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  release:
+    types: [created]
+  # pusu tags 打标签时
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  #  工作流 定义 命名 deploy
+  deploy:
+    name: Deploy to server
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取项目代码
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      # 安装依赖
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: SSR build
+        run: yarn build
+      # 发布分支
+      - name: Release branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: release
+          publish_dir: ./dist
+      # 执行部署脚本到ssh
+      - name: Exec deploy script with SSH
+        uses: appleboy/ssh-action@master
+        with:
+          command_timeout: 4m
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          script: sh ${{ secrets.WWW_PATH }}/scripts/deploy.sh
