@@ -14,30 +14,30 @@ jobs:
     name: Deploy to server
     runs-on: ubuntu-latest
     steps:
-      # 拉取项目代码
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1
         with:
-          node-version: 14
-          cache: 'yarn'
-      # 安装依赖
-      - name: Install dependencies
-        run: yarn install
-      - name: SSR build
-        run: yarn build
-      # 发布分支
-      - name: Release branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: release
-          publish_dir: ./dist
-      # 执行部署脚本到ssh
-      - name: Exec deploy script with SSH
-        uses: appleboy/ssh-action@master
-        with:
-          command_timeout: 4m
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.KEY }}
-          script: sh ${{ secrets.WWW_PATH }}/scripts/deploy.sh
+          node-version: 16.x
+
+      - name: Install Dependencies
+        run: npm install
+        env:
+          CI: true
+
+      - name: Build Project
+        run: npm run build
+        env:
+          CI: true
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          ARGS: '-rltgoDzvO --delete'
+          SOURCE: 'build/'
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USER }}
+          TARGET: '/www/wwwroot'
