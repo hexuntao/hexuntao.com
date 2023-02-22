@@ -5,8 +5,8 @@ on:
     types: [created]
   # pusu tags 打标签时
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
 
 jobs:
   #  工作流 定义 命名 deploy
