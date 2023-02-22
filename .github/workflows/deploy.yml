@@ -11,28 +11,28 @@ on:
 jobs:
   #  工作流 定义 命名 deploy
   deploy:
-    name: Deploy to server
+    name: 部署至服务器
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 检查
         uses: actions/checkout@master
 
-      - name: Setup Node.js environment
+      - name: 设置node环境
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
 
-      - name: Install Dependencies
-        run: npm install
+      - name: 安装依赖
+        run: yarn
         env:
           CI: true
 
-      - name: Build Project
-        run: npm run build
+      - name: 打包项目
+        run: yarn build
         env:
           CI: true
 
-      - name: Deploy to Server
+      - name: 上传至服务器
         uses: easingthemes/ssh-deploy@v2.1.2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
