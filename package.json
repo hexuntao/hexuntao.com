@@ -1,10 +1,23 @@
 {
+  "name": "hexuntao.com",
+  "version": "1.2.1",
+  "description": "个人博客 网站",
   "private": true,
+  "author": {
+    "name": "hexuntao",
+    "url": "https://hexuntao.com"
+  },
+  "homepage": "https://github.com/hexuntao/hexuntao.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexuntao/hexuntao.com"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "next-remote-watch ./data",
     "dev": "next dev",
     "build": "next build && tsx ./scripts/generate-sitemap",
-    "serve": "PORT=3435 next start",
+    "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts --dir pages",
     "prepare": "husky install",

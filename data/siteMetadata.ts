@@ -5,11 +5,14 @@ export let siteMetadata = {
   email: 'hexuntao@gmail.com',
   headerTitle: 'hexuntao | 个人博客',
   description: 'hexuntao 个人博客 一名专注于 Node 全栈开发 的 90后',
-  language: 'en-us',
+  language: 'zh-CN',
   siteUrl: 'https://hexuntao.com',
   github: 'https://github.com/hexuntao',
   twitter: 'https://twitter.com/hexuntao1',
   linkedin: 'https://linkedin.com/in/hexuntao',
+  socialBanner: '/static/logo.png',
+  siteLogo: '/static/logo.png',
+  locale: 'zh-CN',
 }
 
 /**
