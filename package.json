@@ -16,8 +16,9 @@
   "scripts": {
     "start": "next-remote-watch ./data",
     "dev": "next dev",
-    "build": "next build && tsx ./scripts/generate-sitemap",
+    "build": "next build",
     "serve": "next start",
+    "deploy": "yarn build && yarn serve",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts --dir pages",
     "prepare": "husky install",
