@@ -1,0 +1,62 @@
+{
+  "index": {
+    "display": "hidden",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": true
+    }
+  },
+  "code": {
+    "title": "技术笔记",
+    "type": "page"
+  },
+  "life": {
+    "title": "随笔",
+    "type": "page"
+  },
+  "project": {
+    "title": "作品",
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "sidebar": false,
+      "toc": true,
+      "breadcrumb": false,
+      "pagination": false
+    }
+  },
+  "resource": {
+    "title": "导航",
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "sidebar": false,
+      "toc": true,
+      "breadcrumb": false,
+      "pagination": false
+    }
+  },
+  "archive": {
+    "title": "归档",
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "sidebar": false,
+      "toc": true,
+      "breadcrumb": false,
+      "pagination": false
+    }
+  },
+  "about": {
+    "title": "关于",
+    "type": "page",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": true,
+      "breadcrumb": false,
+      "pagination": false
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "hexuntao.com",
+  "version": "1.3.0",
+  "description": "个人博客 网站",
+  "private": true,
+  "author": {
+    "name": "hexuntao",
+    "url": "https://hexuntao.com"
+  },
+  "homepage": "https://github.com/hexuntao/hexuntao.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexuntao/hexuntao.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "next build && next start"
+  },
+  "dependencies": {
+    "@react-aria/ssr": "3.5.0",
+    "axios": "0.27.2",
+    "classnames": "2.3.2",
+    "framer-motion": "^7.3.6",
+    "next": "^13.2.3",
+    "nextra": "^2.2.16",
+    "nextra-theme-docs": "^2.2.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "1.3.0",
+    "typed.js": "^2.0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "7.21.0",
+    "@types/node": "^16.11.12",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.11",
+    "autoprefixer": "10.4.13",
+    "csstype": "3.1.1",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "8.6.0",
+    "postcss": "8.4.21",
+    "tailwindcss": "3.2.7",
+    "typescript": "4.8.4"
+  },
+  "prettier": {
+    "embeddedLanguageFormatting": "off",
+    "htmlWhitespaceSensitivity": "strict"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
