@@ -42,7 +42,7 @@ const theme = {
       }
     }, [timestamp]);
 
-    return <>Last updated on {dateString}</>;
+    return <>最后更新时间 {dateString}</>;
   },
   // unstable_flexsearch: true,
   // unstable_staticImage: true,
@@ -69,8 +69,15 @@ const theme = {
       </>
     );
   },
+  toc: {
+    title: "在此页上",
+  },
   editLink: {
-    text: "Edit this page on GitHub",
+    // text: "在GitHub编辑此页",
+    component: () => null,
+  },
+  feedback: {
+    content: () => null,
   },
   navbar: {
     component: Navigation,

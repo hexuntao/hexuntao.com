@@ -6,7 +6,7 @@ export default function FQAColumn() {
   return (
     <ColumnBox header="FAQ">
       <FadeIn noVertical className="relative flex justify-center w-full mt-16">
-        <div className="text-left  flex flex-col gap-4 ">
+        <div className="flex flex-col gap-4 text-left ">
           <p className="font-bold text-[20px]">网站是否盈利</p>
           <ul className="mb-4">
             <li className="nx-mt-6 nx-leading-7 first:nx-mt-0">

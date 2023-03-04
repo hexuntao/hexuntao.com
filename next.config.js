@@ -5,7 +5,7 @@ const withNextra = require("nextra")({
   unstable_staticImage: true,
   staticImage: true,
   flexsearch: {
-    codeblocks: false,
+    codeblocks: true,
   },
   defaultShowCopyCode: true,
 });

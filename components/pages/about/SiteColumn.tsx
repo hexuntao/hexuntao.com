@@ -3,12 +3,12 @@ import ColumnBox from "./ColumnBox";
 export default function SiteColumn() {
   return (
     <ColumnBox header="关于网站">
-      <div className="text-left text-[20px] flex flex-col gap-6 w-10/12">
-        <p className="nx-mt-6 nx-leading-7 first:nx-mt-0">
+      <div className="text-left text-[20px] flex flex-col gap-6 ">
+        <p className=" nx-mt-6 nx-leading-7 first:nx-mt-0 md:w-[970px]">
           创建这个网站初衷是为了记录作为一名程序员工作中学到的知识，固定对技术的理解，分享有用有趣的事情，后来也想着把增加多一个栏目，记录分享生活，后面也会继续完善丰富网站的内容。
         </p>
-        <p className="font-bold mt-10">相关技术栈</p>
-        <ul>
+        <p className="!mt-10 font-bold md:w-2/3 md:m-auto">相关技术栈</p>
+        <ul className="md:w-2/3 md:m-auto">
           <li className="nx-mt-6 nx-leading-7 first:nx-mt-0">
             前端：基于 <b className="font-bold">Typescript</b> +{" "}
             <b className="font-bold">NextJs</b> +{" "}

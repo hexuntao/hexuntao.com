@@ -9,7 +9,10 @@
   },
   "code": {
     "title": "技术笔记",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "breadcrumb": false
+    }
   },
   "life": {
     "title": "随笔",
@@ -21,9 +24,10 @@
     "theme": {
       "layout": "full",
       "sidebar": false,
-      "toc": true,
+      "toc": false,
       "breadcrumb": false,
-      "pagination": false
+      "pagination": false,
+      "timestamp": false
     }
   },
   "resource": {
