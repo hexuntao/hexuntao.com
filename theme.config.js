@@ -9,10 +9,6 @@ import HeaderLogo from "./components/HeaderLogo";
  * @type {import('nextra-theme-docs').DocsThemeConfig}
  */
 const theme = {
-  // sidebar: {
-  //   defaultMenuCollapseLevel: Number.POSITIVE_INFINITY,
-  // },
-  // docsRepositoryBase: "https://github.com/vercel/turbo/blob/main/docs",
   useNextSeoProps: function SEO() {
     const { frontMatter } = useConfig();
     const defaultTitle = frontMatter.overrideTitle || "Hexuntao";
@@ -46,17 +42,9 @@ const theme = {
   },
   // unstable_flexsearch: true,
   // unstable_staticImage: true,
-  // toc: {
-  //   float: false,
-  //   extraContent: ExtraContent,
+  // banner: {
+  //   text: <div>🎉 网站近期建设中...</div>,
   // },
-  // font: false,
-  // feedback: {
-  //   link: "Question? Give us feedback →",
-  // },
-  banner: {
-    text: <div>🎉 网站近期建设中...</div>,
-  },
   logo: HeaderLogo,
   logoLink: false,
   head: function Head() {

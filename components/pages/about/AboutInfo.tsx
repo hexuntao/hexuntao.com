@@ -11,7 +11,11 @@ import {
 } from "../icon";
 import { CTAButton } from "../home-shared/CTAButton";
 
+import { useModal } from "@nextui-org/react";
+import ModalWechat from "../../ModalWechat";
+
 export default function AboutInfo() {
+  const { setVisible, bindings } = useModal();
   return (
     <FadeIn
       noVertical
@@ -73,7 +77,7 @@ export default function AboutInfo() {
       </FadeIn>
       <FadeIn
         delay={0.3}
-        className="z-50 flex flex-col md:flex-row gap-5 px-6 mt-12"
+        className="z-50 flex flex-col gap-5 px-6 mt-12 md:flex-row"
       >
         <CTAButton>
           <a
@@ -124,12 +128,14 @@ export default function AboutInfo() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 py-1.5 px-2 bg-[#55be69] !text-white"
+            onClick={() => setVisible(true)}
           >
             <WechatIcon className="!text-white" />
             Wechat
           </a>
         </CTAButton>
       </FadeIn>
+      <ModalWechat {...bindings} />
       <FadeIn delay={0.5} className="relative w-full">
         <div className="absolute bottom-0 w-full dark:from-black from-white to-transparent h-72 bg-gradient-to-t" />
       </FadeIn>

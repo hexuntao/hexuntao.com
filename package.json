@@ -1,6 +1,6 @@
 {
   "name": "hexuntao.com",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "个人博客 网站",
   "private": true,
   "author": {
@@ -21,6 +21,7 @@
     "deploy": "next build && next start"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.12",
     "@react-aria/ssr": "3.5.0",
     "axios": "0.27.2",
     "classnames": "2.3.2",

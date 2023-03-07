@@ -149,7 +149,7 @@ function ShortDescription() {
     <div
       id="intro"
       style={{ minHeight: 128 }}
-      className="px-6 w-full text-lg leading-10"
+      className="w-full px-6 text-lg leading-10"
     ></div>
   );
 }
@@ -158,12 +158,17 @@ function LandingPage() {
   return (
     <div>
       <LandingPageGlobalStyles />
-      <main className="relative flex flex-col items-center justify-center w-full h-full  overflow-hidden [--geist-foreground:#fff] dark:[--geist-foreground:#000] [--gradient-stop-1:0px] [--gradient-stop-2:120px] sm:[--gradient-stop-1:0px] sm:[--gradient-stop-2:120px]">
+      <main
+        style={{
+          minHeight: `calc(100vh - var(--nextra-navbar-height) - 10rem)`,
+        }}
+        className="relative flex flex-col items-center justify-center w-full h-full  overflow-hidden [--geist-foreground:#fff] dark:[--geist-foreground:#000] [--gradient-stop-1:0px] [--gradient-stop-2:120px] sm:[--gradient-stop-1:0px] sm:[--gradient-stop-2:120px]"
+      >
         <Background />
         <div className="py-20 flex-col md:flex-row nx-mx-auto nx-flex nx-max-w-[90rem] nx-items-center w-full nx-gap-2 nx-pl-[max(env(safe-area-inset-left),1.5rem)] nx-pr-[max(env(safe-area-inset-right),1.5rem)]">
           <div className="md:w-1/2">
             <FadeIn className="z-10 flex flex-col justify-center w-full h-full">
-              <div className="mt-12 font-extrabold text-5xl lg:text-6xl leading-tight mb-4 ">
+              <div className="mt-12 mb-4 text-5xl font-extrabold leading-tight lg:text-6xl ">
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-black/80 to-black dark:from-white dark:to-[#AAAAAA]">
                   嘿, 雷🐒 阿!
                 </span>
@@ -177,9 +182,9 @@ function LandingPage() {
               </FadeIn>
               <FadeIn
                 delay={0.5}
-                className="z-50 pt-5 pb-10 flex w-full max-w-md "
+                className="z-50 flex w-full max-w-md pt-5 pb-10 "
               >
-                <div className="flex flex-col gap-6 w-full md:flex-row">
+                <div className="flex flex-col w-full gap-6 md:flex-row">
                   <CTAButton>
                     <Link href="/about" className="block py-3">
                       了解更多
@@ -202,7 +207,7 @@ function LandingPage() {
               </FadeIn>
             </FadeIn>
           </div>
-          <div className="md:w-1/2 flex flex-col items-center">
+          <div className="flex flex-col items-center md:w-1/2">
             <FadeIn delay={0.2}>
               <Card className="turbopackCardBg">
                 <ShortDescription />

@@ -5,27 +5,38 @@ export default function ProjectPage() {
   const arr = [
     {
       title: "Hexuntao (本站)",
+      preview: "/static/project/1.png",
       desc: "基于 TS + Nextra + Tailwindcss + framer-motion 构建的个人站点。",
       source: "https://github.com/hexuntao/hexuntao.com",
       link: "https://hexuntao.com",
     },
     {
       title: "Hexuntao API服务",
+      preview: "/static/project/2.png",
       desc: "基于 TS + Nest + MongoDB + Redis 构建 RESTful API 服务。(服务于本站)",
       source: "https://github.com/hexuntao/api.hexuntao.com",
       link: "https://api.hexuntao.com",
     },
     {
       title: "Hexuntao 后台管理",
+      preview: "/static/project/3.png",
       desc: "基于 TS + React + AntdDesign 构建后台管理系统。(管理本站所有数据)",
       source: "https://github.com/hexuntao/admin.hexuntao.com",
       link: "https://admin.hexuntao.com",
     },
     {
       title: "TChatBot",
-      desc: "基于openai chatGPT api 实现 仿 chatGPT 页面聊天功能。",
-      source: "https://github.com/hexuntao/TChatBot",
+      preview: "/static/project/1.png",
+      desc: "基于openai chatGPT api 实现 仿 chatGPT 页面聊天功能。(开发中...)",
+      source: "https://github.com/hexuntao/tChatBot",
       link: "https://tchat.hexuntao.com",
+    },
+    {
+      title: "Tools",
+      preview: "/static/project/1.png",
+      desc: "集合一些日常用到的小工具，组件，方法等。(开发中...)",
+      source: "https://github.com/hexuntao/tools",
+      link: "https://tool.hexuntao.com",
     },
   ];
   return (
@@ -38,14 +49,14 @@ export default function ProjectPage() {
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                className="block w-full"
+                className="relative block w-full"
               >
                 <Image
                   alt="a"
-                  width={500}
-                  height={400}
-                  src="/static/project/1.png"
-                  className="rounded-lg"
+                  width={3360}
+                  height={2100}
+                  src={item.preview}
+                  className="object-cover w-full h-auto rounded-lg"
                 />
               </a>
               <div className="flex flex-col gap-2">

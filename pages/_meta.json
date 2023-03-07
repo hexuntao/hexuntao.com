@@ -19,7 +19,7 @@
     "type": "page"
   },
   "project": {
-    "title": "作品",
+    "title": "项目",
     "type": "page",
     "theme": {
       "layout": "full",
@@ -34,22 +34,11 @@
     "title": "导航",
     "type": "page",
     "theme": {
-      "layout": "full",
       "sidebar": false,
       "toc": true,
       "breadcrumb": false,
-      "pagination": false
-    }
-  },
-  "archive": {
-    "title": "归档",
-    "type": "page",
-    "theme": {
-      "layout": "full",
-      "sidebar": false,
-      "toc": true,
-      "breadcrumb": false,
-      "pagination": false
+      "pagination": false,
+      "timestamp": false
     }
   },
   "about": {
