@@ -26,9 +26,9 @@ export default function ProjectPage() {
     },
     {
       title: "TChatBot",
-      preview: "/static/project/1.png",
+      preview: "/static/project/4.png",
       desc: "基于openai chatGPT api 实现 仿 chatGPT 页面聊天功能。(开发中...)",
-      source: "https://github.com/hexuntao/tChatBot",
+      source: "https://github.com/hexuntao/t-chatbot",
       link: "https://tchat.hexuntao.com",
     },
     {
